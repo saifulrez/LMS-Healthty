@@ -1,0 +1,159 @@
+body {
+  background-color: rgba(174, 182, 191, 0.4);
+}
+
+#row {
+  overflow-y: hidden;
+}
+
+.card {
+  width: 15em;
+  height: 15em;
+  border: 1px solid transparent;
+  float: left;
+  margin: 1em;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  object-fit: contain;
+}
+
+.image:hover,
+.image:focus {
+  opacity: 0.5;
+}
+
+#welcome-modal {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 50em;
+  height: 40em;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-top: 5em;
+  left: 7em;
+  top: 5em;
+  margin-bottom: 5em;
+  border: 2px groove #045074;
+  transition: width 2s, height 2s, transform 1s;
+}
+
+.description-modal,
+#quiz-modal {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 45em;
+  height: 50em;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-top: 5em;
+  margin-bottom: 5em;
+  border: 2px groove #045074;
+  transition: width 2s, height 2s, transform 1s;
+  left: 10em;
+}
+
+.modal-content {
+  position: absolute;
+  margin: 1em;
+  border: 1px solid transparent;
+  width: 80%;
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+  font-family: "Comic Sans MS";
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.5em;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  color: rgb(244, 208, 63);
+  float: right;
+  font-size: 28px;
+  font-weight: 900;
+  margin: 1em;
+  border-style: groove;
+  border-color: rgb(244, 208, 63);
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(21, 67, 96);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h3,
+p {
+  color: rgb(0, 0, 0);
+}
+
+#proceed-button {
+  position: relative;
+  width: 15em;
+  height: 2em;
+  top: 40em;
+  left: 20em;
+  text-align: center;
+  background-color: rgb(244, 208, 63);
+}
+
+#quiz-button {
+  position: relative;
+  width: 25em;
+  height: 7em;
+  top: 5em;
+  left: 22em;
+  text-align: center;
+  background-color: rgb(244, 208, 63);
+}
+
+#submit-answers {
+  position: relative;
+  margin-left: 5em;
+  margin-bottom: 5em;
+  width: 25em;
+  height: 7em;
+  top: 5em;
+  bottom: 3em;
+  left: 5em;
+  background-color: rgb(244, 208, 63);
+}
+
+#proceed-button:hover,
+#proceed-button:focus,
+#quiz-button:hover,
+#quiz-button:focus,
+#submit-answers:hover,
+#submit-answers:focus {
+  cursor: pointer;
+  background-color: rgb(21, 67, 96);
+}

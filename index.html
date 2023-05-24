@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Learning Management System</title>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <script src="script.js" defer></script>
+</head>
+
+<body onload="openWelcomeModal()">
+  <div id="welcome-modal">
+    <div id="welcome-modal-content" class="modal-content">
+      <h3> Welcome to the Occupational health and safety module of the Learning Management System.
+        <p>
+          Please click on the team member profile to know more about their respective priorities and concerns in case of a co-worker's injury/illness.
+          <p>
+            Afterwards, feel free to take a quiz to review your concepts.
+      </h3>
+    </div>
+    <button id="proceed-button" onclick="closeWelcomeModal()"> Proceed </button>
+  </div>
+  <div id="quiz-modal">
+    <span class="close">&times;</span>
+    <div id="quiz-modal-content" class="modal-content">
+      <p>
+        This quiz contains seven questions and there is no time limit.
+        <br />
+        The test is not official, it's just a nice way to see how much you know, or don't know, about the information you read earlier.
+        <br />
+        You will get one point for each correct answer. At the end of the Quiz, your total score will be displayed. Maximum score is seven points.
+      </p>
+      <br />
+      <br />
+      <p>
+        Question 1
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        Which one is a valid concern for an injured worker ? <br />
+        <input type="radio" id="first-question-option-1" name="first-question" value="option-1" checked="true">
+        <label for="first-question-option-1"> Cost of supporting return to work </label> <br />
+        <input type="radio" id="first-question-option-2" name="first-question" value="option-2">
+        <label for="first-question-option-2"> Administration time to manage the absent worker’s claim </label> <br />
+        <input type="radio" id="first-question-option-3" name="first-question" value="option-3">
+        <label for="first-question-option-3"> Concern with what employer and co-workers think </label> <br />
+        <input type="radio" id="first-question-option-4" name="first-question" value="option-4">
+        <label for="first-question-option-4"> Ensuring member is paid appropriately and in a timely manner </label> <br />
+      </p>
+      <br>
+      <p>
+        Question 2
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        Which one is a priority for a Direct supervisor ? <br />
+        <input type="radio" id="second-question-option-1" name="second-question" value="option-1" checked="true">
+        <label for="second-question-option-1"> Containing costs associated with absence </label> <br />
+        <input type="radio" id="second-question-option-2" name="second-question" value="option-2">
+        <label for="second-question-option-2"> Ensuring claim continues </label> <br />
+        <input type="radio" id="second-question-option-3" name="second-question" value="option-3">
+        <label for="second-question-option-3"> Participating in incident investigation to ensure safe workplace </label> <br />
+        <input type="radio" id="second-question-option-4" name="second-question" value="option-4">
+        <label for="second-question-option-4"> Validate eligibility for claim </label> <br />
+      </p>
+      <br>
+      <p>
+        Question 3
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        Who serves as a patient advocate ? <br />
+        <input type="radio" id="third-question-option-1" name="third-question" value="option-1" checked="true">
+        <label for="third-question-option-1"> Direct supervisor </label> <br />
+        <input type="radio" id="third-question-option-2" name="third-question" value="option-2">
+        <label for="third-question-option-2"> Physician </label> <br />
+        <input type="radio" id="third-question-option-3" name="third-question" value="option-3">
+        <label for="third-question-option-3"> Union representative </label> <br />
+        <input type="radio" id="third-question-option-4" name="third-question" value="option-4">
+        <label for="third-question-option-4"> Disability Case Management Professional </label> <br />
+      </p>
+      <br>
+      <p>
+        Question 4
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        Who communicates with all stakeholders on absence duration ? <br />
+        <input type="radio" id="fourth-question-option-1" name="fourth-question" value="option-1" checked="true">
+        <label for="fourth-question-option-1"> Direct supervisor </label> <br />
+        <input type="radio" id="fourth-question-option-2" name="fourth-question" value="option-2">
+        <label for="fourth-question-option-2"> Disability Case Management Professional </label> <br />
+        <input type="radio" id="fourth-question-option-3" name="fourth-question" value="option-3">
+        <label for="fourth-question-option-3"> Union representative</label> <br />
+        <input type="radio" id="fourth-question-option-4" name="fourth-question" value="option-4">
+        <label for="fourth-question-option-4"> Physician </label> <br />
+      </p>
+      <br>
+      <p>
+        Question 5 <br />
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        Which one is a challenge faced by an insurance provider? <br />
+        <input type="radio" id="fifth-question-option-1" name="fifth-question" value="option-1" checked="true">
+        <label for="fifth-question-option-1"> Validate eligibility for claim </label> <br />
+        <input type="radio" id="fifth-question-option-2" name="fifth-question" value="option-2">
+        <label for="fifth-question-option-2"> Administration time to manage the absent worker’s claim </label> <br />
+        <input type="radio" id="fifth-question-option-3" name="fifth-question" value="option-3">
+        <label for="fifth-question-option-3"> Obtaining medical documentation to support claim </label> <br />
+        <input type="radio" id="fifth-question-option-4" name="fifth-question" value="option-4">
+        <label for="fifth-question-option-4"> Ensuring member is paid appropriately and in a timely manner </label> <br />
+      </p>
+      <br>
+      <p>
+        Question 6
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        Who is responsible for administrating the time to manage the absent worker’s claim? <br />
+        <input type="radio" id="sixth-question-option-1" name="sixth-question" value="option-1" checked="true">
+        <label for="sixth-question-option-1"> Union representative </label> <br />
+        <input type="radio" id="sixth-question-option-2" name="sixth-question" value="option-2">
+        <label for="sixth-question-option-2"> Physician </label> <br />
+        <input type="radio" id="sixth-question-option-3" name="sixth-question" value="option-3">
+        <label for="sixth-question-option-3"> Injured Worker </label> <br />
+        <input type="radio" id="sixth-question-option-4" name="sixth-question" value="option-4">
+        <label for="sixth-question-option-4"> Direct supervisor </label> <br />
+      </p>
+      <br>
+      <p>
+        Question 7
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        What can workers do in case of a co-worker injury? <br />
+        <input type="radio" id="seventh-question-option-1" name="seventh-question" value="option-1" checked="true">
+        <label for="seventh-question-option-1"> Doing their own job well </label> <br />
+        <input type="radio" id="seventh-question-option-2" name="seventh-question" value="option-2">
+        <label for="seventh-question-option-2"> Communicating with absent worker in a timely and regular manner </label> <br />
+        <input type="radio" id="seventh-question-option-3" name="seventh-question" value="option-3">
+        <label for="seventh-question-option-3"> Ensuring claim continues </label> <br />
+        <input type="radio" id="seventh-question-option-4" name="seventh-question" value="option-4">
+        <label for="seventh-question-option-4"> None of the above </label> <br />
+      </p>
+      <div id="quiz-results" class="modal-content">
+      </div>
+      <button id="submit-answers" onclick="calcQuizResults()"> Submit Answers </button>
+    </div>
+  </div>
+  <div id="row">
+    <div class="card">
+      <img id="direct-supervisor-image" class="image" src="assets/direct-supervisor.png" />
+    </div>
+    <div id="direct-supervisor-modal" class="description-modal">
+      <span class="close">&times;</span>
+      <div class="modal-content">
+        <h3> Priorities </h3>
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        <ul>
+          <li> Productivity. </li>
+          <li> Replacement of absent worker. </li>
+          <li> Training replacement workers. </li>
+          <li> Containing costs associated with absence. </li>
+          <li> Communication with union, absent worker and co-workers. </li>
+        </ul>
+        <h3> Concerns and Challenges </h3>
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        <ul>
+          <li> Creating return to work opportunities. </li>
+          <li> Cost of supporting return to work. </li>
+          <li> Co-worker complaints. </li>
+          <li> Administration time to manage the absent worker’s claim. </li>
+          <li> Work slow down or disruption caused by absence and then return to work. </li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <img id="co-worker-image" class="image" src="assets/co-worker.png" />
+    </div>
+    <div id="co-worker-modal" class="description-modal">
+      <span class="close">&times;</span>
+      <div class="modal-content">
+        <h3> Priorities </h3>
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        <ul>
+          <li> Doing their own job well. </li>
+          <li> Maintaining health and wellness at work. </li>
+          <li> Avoiding injury. </li>
+        </ul>
+        <h3> Concerns and Challenges </h3>
+        <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+        <ul>
+          <li> Working harder because of the absent worker. </li>
+          <li> Training for a new job to cover the absence. </li>
+          <li> Fear of injury. </li>
+          <li> Increased overtime. </li>
+          <li> Less recovery time or shortened breaks. </li>
+          <l1> Doing a job they are not accustomed to </l1>
+          <l1> Not having their rights violated under the collective agreement </l1>
+        </ul>
+      </div>
+    </div>
+    < <div class="card">
+      <img id="injured-image" class="image" src="assets/injured.png" />
+  </div>
+  <div id="injured-modal" class="description-modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <h3> Priorities </h3>
+      <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+      <ul>
+        <li> Recovery. </li>
+        <li> Pain/symptom management. </li>
+        <li> Ensuring benefits received/paid. </li>
+        <l1> Ensuring claim continues </l1>
+        <l1> Communication with all parties: family, doctor, employer, insurer </l1>
+      </ul>
+      <h3> Concerns and Challenges </h3>
+      <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+      <ul>
+        <li> Fear of re-injury. </li>
+        <li> Being pushed to return to work before feeling ready. </li>
+        <li> Uncertainty with what is happening at work while away. </li>
+        <li> Concern with what employer and co-workers think. </li>
+        <li> Claim eligibility and continuing to prove need for benefits. </li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <img id="physician-image" class="image" src="assets/physician.png" />
+  </div>
+  <div id="physician-modal" class="description-modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <h3> Priorities </h3>
+      <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+      <ul>
+        <li> Recovery. </li>
+        <li> Symptom management. </li>
+        <li> Referrals for diagnostic tests or specialists are done in a timely manner. </li>
+        <l1> Confidentiality of patient’s information </l1>
+        <l1> Being a patient advocate </l1>
+      </ul>
+      <h3> Concerns and Challenges </h3>
+      <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+      <ul>
+        <li> Seeing the patient for follow up at an appropriate time. </li>
+        <li> Understanding the patient’s job and return to work opportunities. </li>
+        <li> Completing paperwork in a timely manner. </li>
+        <li> Communicating with employer and insurer on claim and return to work. </li>
+        <li> Supporting return to work in a timely and appropriate manner. </li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <img id="union-representative-image" class="image" src="assets/union-representative.png" />
+  </div>
+  <div id="union-representative-modal" class="description-modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <h3> Priorities </h3>
+      <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+      <ul>
+        <li> Worker receiving benefits to which they are entitled. </li>
+        <li> Advocating for rights of absent worker and co-workers. </li>
+        <li> Protecting Collective Agreement. </li>
+        <l1> Participating in incident investigation to ensure safe workplace </l1>
+      </ul>
+      <h3> Concerns and Challenges </h3>
+      <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+      <ul>
+        <li> Ensuring member is paid appropriately and in a timely manner. </li>
+        <li> Members being injured. </li>
+        <li> Members being re-injured. </li>
+        <li> Ensuring overtime, training opportunities are assigned by seniority. </li>
+        <li> Members being supported in return to work efforts (supported by management, insurer and co-workers). </li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <img id="insurance-provider-image" class="image" src="assets/insurance-provider.png" />
+  </div>
+  <div id="insurance-provider-modal" class="description-modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <h3> Priorities </h3>
+      <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+      <ul>
+        <li> Contain costs of claim. </li>
+        <li> Validate eligibility for claim. </li>
+        <li> Conclude claim quickly. </li>
+      </ul>
+      <h3> Concerns and Challenges </h3>
+      <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+      <ul>
+        <li> Communication with worker. </li>
+        <li> Explaining insurance process to worker. </li>
+        <li> Obtaining medical documentation to support claim. </li>
+        <li> Ensuring overtime, training opportunities are assigned by seniority. </li>
+        <li> Working with employer, worker and physician on return to work opportunities. </li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <img id="disability-case-management-professional-image" class="image" src="assets/disability-case-management-professional.png" />
+  </div>
+  <div id="disability-case-management-professional-modal" class="description-modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <h3> Priorities </h3>
+      <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+      <ul>
+        <li> Communicating with all stakeholders on absence duration. </li>
+        <li> Communicating with absent worker in a timely and regular manner. </li>
+        <li> Ensuring worker receiving appropriate medical treatment. </li>
+        <l1> Ensuring worker receiving benefits they are entitled to </l1>
+        <l1> Understanding the worker’s job and how the job demands might impact return to work efforts </l1>
+        <l1> Exploring temporary accommodation measures to support return to work </l1>
+      </ul>
+      <h3> Concerns and Challenges </h3>
+      <hr style="width: 100%" display="block" color="rgb(241, 196, 15)">
+      <ul>
+        <li> Health and wellness of worker – potential for delay in recovery or re-injury. </li>
+        <li> Adequate medical intervention starting with correct diagnosis. </li>
+        <li> Trust and cooperation of the physician or healthcare team. </li>
+        <li> Cooperation and support from insurance provider. </li>
+        <li> Understanding worker’s progress in rehabilitation. </li>
+        <l1> Cooperation with supervisors, union, co-workers on return to work opportunities </l1>
+        <l1> Managing a large case load </l1>
+        <l1> Safe and sustainable return to work plans implemented at the right time </l1>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <button id="quiz-button" onclick="openQuizModal()"> Quiz Me </button>
+</body>
+
+</html>
